@@ -1,27 +1,49 @@
+/* Hero Section */
 .hero {
-  height: 90vh;
-  background: url("/images/bg-momos.jpg") center/cover no-repeat;
+  height: 100vh;          /* Full screen height */
+  width: 100vw;           /* Full screen width */
+  
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #000000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:black
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
-  font-size: 50px;
+  font-size: 60px;
   margin-bottom: 15px;
 }
 
-.hero-content p {
-  font-size: 20px;
-  margin-bottom: 20px;
+.hero-content span {
+  color: #ffb703;
 }
 
+.hero-content p {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+/* Button */
 .btn {
   background: #ffb703;
   color: #333;
-  padding: 12px 25px;
+  padding: 14px 30px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -33,17 +55,65 @@
   color: #fff;
 }
 
-.featured {
-  padding: 50px;
+/* Features */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
   text-align: center;
+  background-color: #ffb703;
 }
 
-.featured-grid {
+.feature {
+  width: 280px;
+}
+
+.feature img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+/* About Section */
+.about {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 50px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Specials */
+.specials {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.specials h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.specials-grid {
+  display: flex;
   justify-content: center;
+  gap: 25px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
 .card {
@@ -63,4 +133,29 @@
 
 .card:hover {
   transform: scale(1.05);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 70px 20px;
+  background: #ffb703;
+  color: #fff;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.btn-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -1,47 +1,69 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./About.css";
 
 function About() {
   return (
-    <div className="about-page">
+    <section className="about-section">
       <div className="about-container">
         {/* Left Side - Image */}
-        <div className="about-image">
-          <img src="/images/about-chef.jpg" alt="Our Chef" />
-        </div>
+        <motion.div
+          className="about-image"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img src="/images/chef.jpeg" alt="Our Chef" />
+        </motion.div>
 
         {/* Right Side - Content */}
-        <div className="about-content">
-          <h2>About Us</h2>
+        <motion.div
+          className="about-content"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="about-title">About <span>Us</span></h2>
           <p>
             Welcome to <strong>MomoHub</strong> – the ultimate destination for
             delicious, mouth-watering momos. We started our journey with a
-            simple dream: to bring authentic taste of Himalayan momos to every
-            foodie in the city.
+            simple dream: to bring authentic Himalayan flavors to every foodie
+            in the city.
           </p>
           <p>
-            From classic steamed momos to our signature tandoori momos, each
+            From classic steamed momos to our signature tandoori delights, each
             bite is made with love and the freshest ingredients. Our mission is
             simple – <em>Good Food, Good Mood!</em>
           </p>
 
           <div className="about-highlights">
-            <div className="highlight-card">
+            <motion.div
+              className="highlight-card"
+              whileHover={{ scale: 1.05 }}
+            >
               <h3>👨‍🍳 Expert Chefs</h3>
-              <p>Trained professionals with passion for momos.</p>
-            </div>
-            <div className="highlight-card">
+              <p>Trained professionals with a passion for momos.</p>
+            </motion.div>
+
+            <motion.div
+              className="highlight-card"
+              whileHover={{ scale: 1.05 }}
+            >
               <h3>🥟 20+ Varieties</h3>
               <p>Explore unique flavors from veg to chicken delights.</p>
-            </div>
-            <div className="highlight-card">
+            </motion.div>
+
+            <motion.div
+              className="highlight-card"
+              whileHover={{ scale: 1.05 }}
+            >
               <h3>🚀 Fast Delivery</h3>
               <p>Hot and fresh momos delivered to your doorstep.</p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 

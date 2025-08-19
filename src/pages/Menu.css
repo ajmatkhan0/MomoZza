@@ -1,74 +1,82 @@
 .menu-page {
   width: 100%;
   min-height: 100vh;
-  padding: 60px 40px; /* % ki jagah px ya rem */
-  background: #fff8f0;
+  padding: 100px 5%;
+  /* background: linear-gradient(135deg, #fffdf7, #fff5ec); */
+  box-sizing:content-box;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+}
+
+.menu-header {
   text-align: center;
-  box-sizing: border-box;
+  margin-bottom: 50px;
 }
 
-
-.menu-container {
-  width: 100%;
-  min-height: 100vh;   /* full height */
-  background-color: #fff4eb; /* ya jo tumhe chahiye */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-
-.menu-page h2 {
+.menu-header h2 {
   font-size: 2.5rem;
-  color: #e63946;
+  color:#ead8d8;
   margin-bottom: 10px;
 }
 
-.menu-subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 40px;
+.menu-header p {
+  font-size: 1.2rem;
+  color: #ead8d8;
 }
 
-/* Grid */
+/* Grid Layout */
+
+
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  width: 100%;
+  max-width: 16000px;  /* bada width allow kar */
+  /* margin: 0 auto; */
+  padding: 0 50px;   
 }
 
-/* Card */
+
+
+
+/* Card Style */
 .menu-card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   overflow: hidden;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-.menu-card img {
+.img-container img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
 .card-content {
-  padding: 15px;
+  padding: 20px;
+  text-align: center;
 }
 
 .card-content h3 {
-  font-size: 1.2rem;
-  margin: 5px 0;
-  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
-.card-content p {
-  font-size: 1rem;
-  color: #777;
+.price {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: bold;
 }
 
 /* Popup */
@@ -87,46 +95,49 @@
 
 .popup-content {
   background: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
   max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 .popup-content h3 {
   margin-bottom: 10px;
-  color: #e63946;
+  font-size: 1.8rem;
 }
 
 .popup-content p {
   margin-bottom: 20px;
-  color: #333;
+  font-size: 1.2rem;
 }
 
-.popup-content .btn {
+.btn {
   display: inline-block;
-  margin: 8px;
-  background: #ffb703;
+  margin: 10px;
   padding: 10px 20px;
-  color: #333;
+  background: #ff5a5f;
+  color: #fff;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
-.popup-content .btn:hover {
-  background: #fb8500;
-  color: #fff;
+.btn:hover {
+  background: #e74c3c;
 }
 
 .close-btn {
   margin-top: 15px;
-  background: #e63946;
+  padding: 8px 15px;
+  background: #333;
   color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #000;
 }

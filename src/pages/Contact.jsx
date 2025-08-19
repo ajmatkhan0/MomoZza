@@ -1,21 +1,36 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Contact.css";
 
 function Contact() {
   return (
-    <div className="contact-page">
-      <h2>Contact Us</h2>
+    <section className="contact-section">
+      <motion.h2
+        className="contact-title"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        Contact <span>Us</span>
+      </motion.h2>
       <p className="sub-text">
         We’d love to hear from you! Reach out for orders, feedback, or queries.
       </p>
 
       <div className="contact-container">
         {/* Left Side - Contact Info & Map */}
-        <div className="contact-info">
+        <motion.div
+          className="contact-info"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h3>📍 Our Location</h3>
           <p>MomoHub Restaurant, Andheri West, Mumbai</p>
+
           <h3>📞 Call Us</h3>
           <p>+91 98765 43210</p>
+
           <h3>📧 Email</h3>
           <p>info@momohub.com</p>
 
@@ -30,10 +45,15 @@ function Contact() {
               loading="lazy"
             ></iframe>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Side - Contact Form */}
-        <div className="contact-form">
+        <motion.div
+          className="contact-form"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h3>📝 Send a Message</h3>
           <form>
             <input type="text" placeholder="Your Name" required />
@@ -41,9 +61,9 @@ function Contact() {
             <textarea placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message 🚀</button>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 
