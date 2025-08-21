@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async"; 
 import "./About.css";
 
 function About() {
   return (
+    <HelmetProvider>
     <section className="about-section">
       <div className="about-container">
         {/* Left Side - Image */}
@@ -64,6 +66,7 @@ function About() {
         </motion.div>
       </div>
     </section>
+    </HelmetProvider>
   );
 }
 

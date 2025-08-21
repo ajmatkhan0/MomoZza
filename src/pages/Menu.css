@@ -2,8 +2,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 100px 5%;
-  /* background: linear-gradient(135deg, #fffdf7, #fff5ec); */
-  box-sizing:content-box;
+  box-sizing: content-box;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,20 +27,14 @@
 }
 
 /* Grid Layout */
-
-
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px;
   width: 100%;
-  max-width: 16000px;  /* bada width allow kar */
-  /* margin: 0 auto; */
+  max-width: 1600px;
   padding: 0 50px;   
 }
-
-
-
 
 /* Card Style */
 .menu-card {
@@ -140,4 +133,60 @@
 
 .close-btn:hover {
   background: #000;
+}
+
+/* ✅ Responsive Media Queries */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .menu-header h2 {
+    font-size: 2rem;
+  }
+  .menu-header p {
+    font-size: 1rem;
+  }
+  .menu-grid {
+    padding: 0 30px;
+    gap: 25px;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .menu-page {
+    padding: 80px 20px;
+  }
+
+  .menu-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-header p {
+    font-size: 0.95rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .menu-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .popup-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .popup-content p {
+    font-size: 1rem;
+  }
 }

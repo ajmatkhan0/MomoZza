@@ -13,6 +13,7 @@ function Menu() {
   ];
 
   return (
+      <HelmetProvider>
     <div className="menu-page">
       <div className="menu-header">
         <h2>Our Menu</h2>
@@ -90,6 +91,7 @@ function Menu() {
         )}
       </AnimatePresence>
     </div>
+      </HelmetProvider>
   );
 }
 

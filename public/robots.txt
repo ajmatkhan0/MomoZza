@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://momozza.netlify.app/sitemap.xml

@@ -1,8 +1,11 @@
 .contact-section {
-  padding: 80px 10%;
-  background: #111; /* dark background */
+  padding: 80px 0;
+  background: #111;
   text-align: center;
-  color: #f5f5dc; /* beige text */
+  color: #f5f5dc;
+  width: 100vw;        /* ✅ full viewport width */
+  margin: 0;           /* ✅ koi margin nahi */
+  box-sizing: border-box;
 }
 
 .contact-title {
@@ -30,7 +33,11 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  max-width: 1200px;   /* ✅ andar ka content limit me rahe */
+  margin: 0 auto;      /* ✅ center me align ho */
+  padding: 0 20px;     /* ✅ responsive spacing */
 }
+
 
 /* Left Info */
 .contact-info {
@@ -114,4 +121,67 @@
 .contact-form button:hover {
   background: #ffcc70;
   color: #111;
+}
+
+/* ✅ Responsive Media Queries */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  .sub-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 50px 15px; /* thoda side padding safe space ke liye */
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch; /* ✅ full width le */
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;     /* ✅ full width */
+    max-width: 100%; /* ✅ no restriction */
+    margin: 0 auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.6rem;
+  }
+
+  .sub-text {
+    font-size: 0.85rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }

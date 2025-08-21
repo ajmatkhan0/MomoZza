@@ -4,6 +4,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
+    <HelmetProvider>
     <section className="contact-section">
       <motion.h2
         className="contact-title"
@@ -64,7 +65,9 @@ function Contact() {
         </motion.div>
       </div>
     </section>
+      </HelmetProvider>
   );
+
 }
 
 export default Contact;

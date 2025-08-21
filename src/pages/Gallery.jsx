@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async"; 
 import "./Gallery.css";
 
 function Gallery() {
@@ -13,6 +14,7 @@ function Gallery() {
   ];
 
   return (
+     <HelmetProvider>
     <section className="gallery-section">
       {/* Title Animation */}
       <motion.h2
@@ -52,6 +54,7 @@ function Gallery() {
         ))}
       </div>
     </section>
+    </HelmetProvider>
   );
 }
 

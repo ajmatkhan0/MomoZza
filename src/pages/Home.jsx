@@ -9,6 +9,7 @@ function Home() {
   }, []);
 
   return (
+      <HelmetProvider>
     <div className="home">
       {/* Hero Section */}
       <section className="hero" data-aos="fade-in">
@@ -78,6 +79,7 @@ function Home() {
         <a href="/menu" className="btn btn-bounce">Order Now</a>
       </section>
     </div>
+      </HelmetProvider>
   );
 }
 
